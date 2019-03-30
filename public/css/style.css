@@ -1,0 +1,133 @@
+html
+{
+    height:100%;
+}
+body
+{
+    background-image: url(../0.jpg);
+    margin:0;
+    position:relative;
+    min-height:100%;
+    /*font-family: 'Roboto Slab', serif;*/
+    font-family: 'Inconsolata', monospace;
+} 
+nav
+{
+    background:rgba(69, 74, 110, 0.616);
+}
+nav a
+{
+    font-size: 2rem;
+    color:white;
+}
+header
+{
+    margin-bottom:2em;
+    margin-top:2em;
+    text-align: center;
+    padding-top: 6em;
+    padding-bottom: 2.5em;
+}
+h1
+{
+    font-weight: bolder;
+    color:white;
+    font-size:4rem;
+    filter: drop-shadow(0.05em 0.05em 0.05em rgba(0,0,0,0.5));
+}
+.bodyContent
+{
+    padding-bottom:5em;
+}
+.container
+{
+    min-width:90%;
+    max-width:90%;
+}
+section
+{
+    margin-bottom:2em;
+}
+.mainContent
+{
+    background:white;
+    padding:2em;
+    border-radius:2em;
+}
+.post, .postComments
+{
+    background:#c6c8e7;
+    padding:1em;
+    margin:1em;
+    border-radius:1em;
+    word-wrap: break-word;
+}
+.postContent
+{
+    background:white;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    padding:1em;
+}
+#formCommentContent
+{
+    border-radius:1em;
+    border:none;
+    padding:0.5em;
+    resize:none;
+    display: table-caption;
+    width: 100%;
+    display: block;
+    box-sizing: padding-box;
+    overflow: hidden;
+}
+input[type='submit']
+{
+    display:block;
+    margin:0 auto;
+    margin-top:0.5em;
+}
+.postPagination
+{
+    text-align: center;
+}
+aside h4
+{
+    text-align: center;
+}
+aside table
+{
+    width:100%;
+}
+aside table td
+{
+    padding-left:1em;
+    padding-right:1em;
+}
+.table-striped > tbody > tr:nth-child(odd) > td
+{
+    background:#c6c8e7;
+}
+.table-striped > tbody > tr:nth-child(even) > td
+{
+    background:white;
+}
+.asideContent
+{
+    background:white;
+    border-radius:2em;
+    padding:2em;
+}
+.asideContent:nth-child(2)
+{
+    margin-top:2em;
+}
+footer
+{
+    background:rgba(69, 74, 110, 0.616);
+    bottom:0;
+    left:0;
+    right:0;
+    position:absolute;
+    height:3em;
+}
