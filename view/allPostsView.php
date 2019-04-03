@@ -9,7 +9,7 @@
     {
     ?>
         <article class="post">
-            <a href="index.php?chap=<?php echo $post->ID();?>">  <!-- !!!! ID =/= CHAPTER -->
+            <a href="index.php?chap=<?php echo $post->chapter();?>">  <!-- !!!! ID =/= CHAPTER -->
                 <span class="postChapter">
                     CHAPITRE <?php echo $post->chapter();?> : 
                 </span>
