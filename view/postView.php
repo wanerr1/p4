@@ -36,7 +36,8 @@
         ?>
             <div class="postComments">
                 <span><?php echo $comment->author();?></span>
-                <span><a href=''><i class="fas fa-exclamation-circle"></i> Signaler</a></span>
+                <span>posté le <?php echo $comment->commentDate();?></span>
+                <span><button><a href='index.php?report=<?php echo $comment->ID()?>&amp;chap=<?php echo $post->chapter() ?>'><i class="fas fa-exclamation-circle"></i> Signaler</a></button></span>
                 <div><?php echo $comment->content();?></div>
             </div>
         <?php

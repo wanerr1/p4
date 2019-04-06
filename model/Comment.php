@@ -4,7 +4,7 @@ class Comment
     private $_ID;
     private $_postID;
     private $_author;
-    private $_date;
+    private $_Commentdate;
     private $_content;
 
     public function __construct($row)
@@ -16,7 +16,7 @@ class Comment
         $this->setID($row['ID']);
         $this->setPostID($row['postID']);
         $this->setAuthor($row['author']);
-        $this->setDate($row['date']);
+        $this->setCommentDate($row['commentDate']);
         $this->setContent($row['content']);
     }
 
@@ -33,9 +33,9 @@ class Comment
     {
         return $this->_author;
     }
-    public function date()
+    public function commentDate()
     {
-        return $this->_date;
+        return $this->_commentDate;
     }
     public function content()
     {
@@ -54,9 +54,9 @@ class Comment
     {
         $this->_author = $author;
     }
-    public function setDate($date)
+    public function setCommentDate($commentDate)
     {
-        $this->_date = $date;
+        $this->_commentDate = $commentDate;
     }
     public function setContent($content)
     {

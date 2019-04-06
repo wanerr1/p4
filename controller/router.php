@@ -1,43 +1,25 @@
 <?php
 
-    //POST MANAGER TEST
-    $test = new PostManager;
-    $allPosts = $test->selectAll(); // ASIDE
-
-    //COMMENT MANAGER TEST
-    $commentsManage = new CommentManager;
+    require('controller/controller.php');
 
     //ISSET GET 'PAGE' -> ALLPOSTSVIEW
     if(isset($_GET['page'])) 
     {
-        $page = $_GET['page'];
-        $firstPostByPage = ($page - 1) * 3;
-        $posts = $test->select($firstPostByPage);
-        require('view/allPostsView.php');
+        definePage($_GET['page']);
     }
     //ISSET GET 'CHAP' -> POSTVIEW
     elseif(isset($_GET['chap']))
     {
-        $chap = $_GET['chap'];
-        $post = $test->read($chap);
-
-        $allComments = $commentsManage->selectAll($chap);
-        
-        //POST NEW COMMENT
-        if(!empty($_POST))
+        //PUT THE IF + DISPLAYPOST IN ONE FUNCTION ?
+        if(isset($_GET['report']))
         {
-            $commentData = $_POST;
-            $commentsManage->create($commentData);
+            report($_GET['report']);
         }
-        require('view/postView.php');
-
+        displayPost($_GET['chap']);
     }
     //DEFAULT -> ALLPOSTSVIEW PAGE 1
     else
     {
-        $page = 1;
-        $firstPostByPage = 0;
-        $posts = $test->select($firstPostByPage);
-        require('view/allPostsView.php');
+        definePage(1);
     }
  

@@ -10,7 +10,12 @@ body
     min-height:100%;
     /*font-family: 'Roboto Slab', serif;*/
     font-family: 'Inconsolata', monospace;
-} 
+}
+button, input[type='submit']
+{
+    border:none;
+    border-radius:1em;
+}
 nav
 {
     background:rgba(69, 74, 110, 0.616);
@@ -61,6 +66,12 @@ section
     margin:1em;
     border-radius:1em;
     word-wrap: break-word;
+    position:relative;
+}
+.postComments button
+{
+    position:absolute;
+    right: 1em;
 }
 .postContent
 {
